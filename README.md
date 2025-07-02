@@ -5,7 +5,7 @@ https://www.kaggle.com/code/vmkhoa28/custom-resnet50-with-adamw-2
 This is my first project applying deep CNN architectures to an image classification task using the CIFAR-10 dataset.
 
 ## Objective
-To classify CIFAR-10 images into one of the 10 categories using a custom implementation of the ResNet50 architecture.
+To classify CIFAR-10 images into one of the 10 categories using a custom ResNet50 architecture.
 
 ## Dataset
 - **Dataset**: [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
@@ -15,9 +15,9 @@ To classify CIFAR-10 images into one of the 10 categories using a custom impleme
 - **Classes**: `airplane`, `automobile`, `bird`, `cat`, `deer`, `dog`, `frog`, `horse`, `ship`, `truck`
 
 ## Preprocessing
-- Data Augmentation (for training/dev):
+- Data Augmentation for train and validation sets:
   - Random Horizontal Flip
-  - Random Rotation (±20°)
+  - Random Rotation
   - Random Crop (32x32 with padding = 4)
 - Normalization using ImageNet mean & std:
   - `mean = [0.485, 0.456, 0.406]`
@@ -35,7 +35,7 @@ To classify CIFAR-10 images into one of the 10 categories using a custom impleme
   - Adaptive Average Pooling
   - Fully Connected Layer: `512 * 4 → 10`
 - Activation: ReLU
-- No max pooling (Identity used)
+- No max pooling (The input size is too small)
 
 ## Training
 - **Epochs**: 50  
@@ -64,11 +64,3 @@ To classify CIFAR-10 images into one of the 10 categories using a custom impleme
   - Ship: 94.10%
   - Truck: 93.10%
 
-## Visualization
-- Accuracy and loss curves for both train and validation sets plotted per epoch.
-- Image samples shown with original class labels from the CIFAR-10 training set.
-
-## Result Highlights
-- Achieved **>90% test accuracy**
-- Effective training using data augmentation and AdamW optimizer
-- Balanced generalization (no severe overfitting)
