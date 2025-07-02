@@ -28,14 +28,14 @@ To classify CIFAR-10 images into one of the 10 categories using a custom ResNet5
 - Residual Block:
   - 3 Convolutional layers: 1x1 → 3x3 → 1x1
   - BatchNorm after each Conv
-  - Skip connection with optional identity downsampling
+  - Skip connection with identity downsampling
 - Full model:
   - Input Conv + BN + ReLU
-  - 4 layers with block repetitions: `[3, 4, 6, 3]`
-  - Adaptive Average Pooling
-  - Fully Connected Layer: `512 * 4 → 10`
+  - 4 layers: `[3, 4, 6, 3]`
+  - Adaptive average pooling
+  - Fully connected layer: `512 * 4 → 10`
 - Activation: ReLU
-- No max pooling (The input size is too small)
+- No max pooling (The size is too small)
 
 ## Training
 - **Epochs**: 50  
@@ -46,9 +46,6 @@ To classify CIFAR-10 images into one of the 10 categories using a custom ResNet5
 - **Batch Size**: 256  
 - **Device**: CUDA (if available)  
 - **Early Stopping**: Patience = 10  
-- Metrics logged:
-  - Training & validation accuracy
-  - Training & validation loss
 
 ## Evaluation
 - **Final Test Accuracy**: **90.92%**
