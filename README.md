@@ -35,7 +35,6 @@ To classify CIFAR-10 images into one of the 10 categories using a custom ResNet5
   - Adaptive average pooling
   - Fully connected layer: `512 * 4 → 10`
 - Activation: ReLU
-- No max pooling (The size is too small)
 
 ## Training
 - **Epochs**: 50  
@@ -44,20 +43,8 @@ To classify CIFAR-10 images into one of the 10 categories using a custom ResNet5
   - Learning rate: `0.001`  
   - Weight decay: `0.01`  
 - **Batch Size**: 256  
-- **Device**: CUDA (if available)  
-- **Early Stopping**: Patience = 10  
 
 ## Evaluation
-- **Final Test Accuracy**: **90.92%**
-- **Per-Class Accuracy**:
-  - Airplane: 93.10%
-  - Automobile: 95.30%
-  - Bird: 84.80%
-  - Cat: 84.10%
-  - Deer: 90.30%
-  - Dog: 84.00%
-  - Frog: 98.20%
-  - Horse: 92.20%
-  - Ship: 94.10%
-  - Truck: 93.10%
+- **Final Test Accuracy**: **~90.92%**
+
 
