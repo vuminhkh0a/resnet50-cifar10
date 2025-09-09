@@ -45,6 +45,6 @@ To classify CIFAR-10 images into one of the 10 categories using a custom ResNet5
 - **Batch Size**: 256  
 
 ## Evaluation
-- **Final Test Accuracy**: **~90.92%**
+- **Final Test Accuracy**: **~90%**
 
 
