@@ -4,7 +4,7 @@ This is my first project applying deep CNN architectures to an image classificat
 https://www.kaggle.com/code/vmkhoa28/custom-resnet50-with-adamw-2
 
 ## Objective
-To classify CIFAR-10 images into one of the 10 categories using a custom ResNet50 architecture.
+To classify CIFAR-10 images into one of the 10 categories using ResNet50 architecture.
 
 ## Dataset
 - **Dataset**: [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
